@@ -49,11 +49,6 @@ source /opt/ros/humble/setup.bash
 
 ## Build & Run
 
-git clone the repo on the rover
-```bash
-    cd PT_Rover 
-```
-
 Option 1 — Using the provided launch file (recommended)
 
 ```bash
