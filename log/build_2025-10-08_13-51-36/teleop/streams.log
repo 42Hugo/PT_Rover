@@ -1,0 +1,32 @@
+[0.558s] Invoking command in '/home/hugo/Desktop/ws/PT_Rover/src/teleop': PYTHONPATH=/home/hugo/Desktop/ws/PT_Rover/build/teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/teleop build --build-base /home/hugo/Desktop/ws/PT_Rover/build/teleop/build install --record /home/hugo/Desktop/ws/PT_Rover/build/teleop/install.log --single-version-externally-managed install_data
+[0.768s] running egg_info
+[0.768s] creating ../../build/teleop/teleop.egg-info
+[0.768s] writing ../../build/teleop/teleop.egg-info/PKG-INFO
+[0.768s] writing dependency_links to ../../build/teleop/teleop.egg-info/dependency_links.txt
+[0.768s] writing entry points to ../../build/teleop/teleop.egg-info/entry_points.txt
+[0.769s] writing requirements to ../../build/teleop/teleop.egg-info/requires.txt
+[0.769s] writing top-level names to ../../build/teleop/teleop.egg-info/top_level.txt
+[0.769s] writing manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'
+[0.770s] reading manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'
+[0.770s] adding license file 'LICENSE'
+[0.771s] writing manifest file '../../build/teleop/teleop.egg-info/SOURCES.txt'
+[0.771s] running build
+[0.771s] running build_py
+[0.771s] creating /home/hugo/Desktop/ws/PT_Rover/build/teleop/build
+[0.771s] creating /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib
+[0.771s] creating /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib/teleop
+[0.771s] copying teleop/__init__.py -> /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib/teleop
+[0.771s] copying teleop/rover_control.py -> /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib/teleop
+[0.771s] running install
+[0.772s] running install_lib
+[0.772s] creating /home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages/teleop
+[0.772s] copying /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib/teleop/__init__.py -> /home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages/teleop
+[0.773s] copying /home/hugo/Desktop/ws/PT_Rover/build/teleop/build/lib/teleop/rover_control.py -> /home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages/teleop
+[0.773s] byte-compiling /home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages/teleop/__init__.py to __init__.cpython-310.pyc
+[0.773s] byte-compiling /home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages/teleop/rover_control.py to rover_control.cpython-310.pyc
+[0.774s] running install_data
+[0.774s] creating /home/hugo/Desktop/ws/PT_Rover/install/teleop/share/ament_index
+[0.774s] creating /home/hugo/Desktop/ws/PT_Rover/install/teleop/share/ament_index/resource_index
+[0.774s] creating /home/hugo/Desktop/ws/PT_Rover/install/teleop/share/ament_index/resource_index/packages
+[0.774s] error: can't copy 'resource/teleop': doesn't exist or not a regular file
+[0.788s] Invoked command in '/home/hugo/Desktop/ws/PT_Rover/src/teleop' returned '1': PYTHONPATH=/home/hugo/Desktop/ws/PT_Rover/build/teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hugo/Desktop/ws/PT_Rover/install/teleop/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/teleop build --build-base /home/hugo/Desktop/ws/PT_Rover/build/teleop/build install --record /home/hugo/Desktop/ws/PT_Rover/build/teleop/install.log --single-version-externally-managed install_data
