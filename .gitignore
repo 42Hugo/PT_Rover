@@ -1,0 +1,10 @@
+# === ROS 2 / Colcon build artifacts ===
+build/
+install/
+log/
+
+# === Python build artifacts ===
+__pycache__/
+
+# === Editor / IDE files ===
+.vscode/
