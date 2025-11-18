@@ -59,6 +59,7 @@ ssh rover@192.168.8.111
 Upload arduino code from the Raspberry Pi to the Arduino
 
 ```bash
+cd ~/PT_Rover/Arduino/full_control
 arduino --upload full_control.ino --port /dev/ttyACM0`
 ```
 
