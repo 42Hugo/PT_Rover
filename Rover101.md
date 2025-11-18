@@ -127,13 +127,13 @@ The classes `DCMotor`, `Rover_Calculations`, `Rover` contain all methods needed 
 
 The Robot Arm attached to the rover is called `jimmy` in the code. This robot is made of XL320 Dynamixels motors, a library is used to control them. Jimmy has a small workspace and is only controlled in joint mode.
 
-# Tips
+# 💡 Tips
 
 - DC motor differential with Ackermann Steering doesn't work when moving backwards, because of a PWM conflict
 - If a DC motor turns in the wrong direction, you can swap its wires 
 - It seems that `batteryWarning()` doesn't properly detects that the battery is low even if test bench worked, more investigation is needed 
 
-# Summary for Tele-Operation
+# 📋 Summary for Tele-Operation
 
 Use a terminal from your PC to access the raspberry Pi via ssh, example:
 
@@ -144,6 +144,7 @@ ssh rover@192.168.8.111
 Upload arduino code from the Raspberry Pi to the Arduino board
 
 ```bash
+cd ~/PT_Rover/Arduino/full_control
 arduino --upload full_control.ino --port /dev/ttyACM0`
 ```
 
