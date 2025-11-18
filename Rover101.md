@@ -141,7 +141,7 @@ Use a terminal from your PC to access the raspberry Pi via ssh, example:
 ssh rover@192.168.8.111
 ```
 
-Upload arduino code from the raspberry Pi to the arduino
+Upload arduino code from the Raspberry Pi to the Arduino board
 
 ```bash
 arduino --upload full_control.ino --port /dev/ttyACM0`

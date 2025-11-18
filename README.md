@@ -45,6 +45,24 @@ source /opt/ros/humble/setup.bash
 
 3. Flash the Arduino firmware for your rover.
 
+Prerequisites are:
+- Arduino is installed on the Raspberry Pi
+- Check if the port used for USB communication between Arduino and Pi is `ttyACM0` or another
+- Give the read/write rights to the port 
+
+Use a terminal from your PC to access the raspberry Pi via ssh, example:
+
+```bash
+ssh rover@192.168.8.111
+```
+
+Upload arduino code from the Raspberry Pi to the Arduino
+
+```bash
+arduino --upload full_control.ino --port /dev/ttyACM0`
+```
+
+
 ---
 
 ## Build & Run
