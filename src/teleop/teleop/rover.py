@@ -23,7 +23,12 @@ class MotorController(Node):
         super().__init__('jimmy_motor_controller')
         self.serial_port = '/dev/ttyACM0'  # Adjust the port based on your Arduino connection
         self.serial_baudrate = 115200
-        #self.serial_connection = serial.Serial(self.serial_port, self.serial_baudrate)
+
+        #to test the code without the arduino wired to the raspberry pi you can comment the following line
+        # You also have to comment out a sectoion of the code in the send_command_to_arduino function
+        self.serial_connection = serial.Serial(self.serial_port, self.serial_baudrate)
+
+
         self.arm_ready = 0  # Initialize as an instance variable
         self.griper = 1 #0=closed & 1=open
         self.control="rover"
@@ -57,18 +62,24 @@ class MotorController(Node):
         print("twist_call")
         command = self.convert_twist_to_command(msg)
         self.send_command_to_arduino(command)
+
+
     def get_target_radius(self, twist_msg):
         linear_velocity = twist_msg.linear.x
         angular_velocity = twist_msg.angular.z
         direction = "R" if angular_velocity < 0 else "L"
+
         if angular_velocity != 0 :
-        	target_radius = abs(linear_velocity / angular_velocity)*1000 
+            target_radius = abs(linear_velocity / angular_velocity)*1000 
         else:
-        	target_radius=0
+            target_radius=0
+
         if target_radius > 0 and target_radius<500:
-        	target_radius=500
+            target_radius=500
+
         if target_radius > 0 and target_radius>2500:
             target_radius=2500
+
         return target_radius, direction
 
     def convert_twist_to_command(self, twist_msg):
@@ -123,6 +134,7 @@ class MotorController(Node):
                     return "JS"+'\r'
                 #elif btnBoot == 1:
                 #    return "Jreboot"+'\r'
+                #this btn was creating error, and was therfor commented out
                 elif btnA == 1:
                     return "JCl"+'\r'
                 elif btnB == 1:
@@ -152,10 +164,13 @@ class MotorController(Node):
         if command!=None:
             print(f"message sent to Arduino: {command}")
             previousTime=time.time()
-            #self.serial_connection.write(command.encode())
-            #self.serial_connection.flush()
 
-            """
+
+            #To test the code without the Arduino wired you can commente out the rest of this fct 
+            # and the initialisation in the init fct
+            self.serial_connection.write(command.encode())
+            self.serial_connection.flush()
+
             while True:
                 line = self.serial_connection.readline().decode().strip()
                 if line != "":
@@ -163,8 +178,8 @@ class MotorController(Node):
                     #print(line)
                     #print('time difference was: ', str(currentTime-previousTime))
                     break
-            """
-
+            
+            #you need to comment until here for testing
 
 
 def main(args=None):
