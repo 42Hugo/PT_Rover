@@ -4,6 +4,10 @@ Simple teleoperation and project archives for the PT Rover. you can first go thr
 
 Tested with ROS 2 Humble on Ubuntu 22.04 (Jammy Jellyfish).
 
+If you want to explore further, everything that was originally on the rover at the end of the PT is stored in the **Archive** folder.  
+You can also check out <https://github.com/G0sthlem11/rover>, which contains some of the work related to autonomous navigation (though parts of it may be incomplete).
+
+
 ---
 
 ## Table of contents
